@@ -3,11 +3,27 @@ const timerDisplay = document.querySelector('.display__time-left');
 const endTime = document.querySelector('.display__end-time');
 const buttons = document.querySelectorAll('[data-time]');
 const backgroundImage = document.querySelector(".background-image");
+const cats = [100,101,200,201,202,204,206,207,300,301,302,303,304,305,307,400,401,402,403,404,405,406,408,409,410,411,412,413,414,415,416,417,418,420,421,422,423,424,425,426,429,431,444,450,451,500,502,503,504,506,507,508,509,511,599];
+const httpCat = "http://http.cat/";
+
+function getRandomCat() {
+  console.log(cats.length);
+  const index = Math.floor(Math.random() * (cats.length - 0) + 0);
+  console.log(index);
+  return cats[index];
+}
+
+function chooseCat() {
+  unblur(100);
+  backgroundImage.src = httpCat + getRandomCat();
+
+}
+
 
 function timer(seconds) {
   // clear any existing timers
   clearInterval(countdown);
-
+  chooseCat();
   const now = Date.now();
   const then = now + seconds * 1000;
   displayTimeLeft(seconds);
@@ -23,7 +39,7 @@ function timer(seconds) {
     }
     // display it
     displayTimeLeft(secondsLeft);
-    let blur = percentBetween(secondsLeft, maxSecondsLeft, 0)
+    const blur = percentBetween(secondsLeft, maxSecondsLeft, 0)
     unblur(blur)
   }, 1000);
 }
@@ -67,5 +83,3 @@ document.customForm.addEventListener('submit', function(e) {
   timer(mins * 60);
   this.reset();
 });
-
-
