@@ -18,24 +18,34 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around; }
 
+.container > * {
+  max-width: 500px; }
+
 .image-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-item-align: center;
-      align-self: center; }
+  width: 100%;
+  height: auto;
+  background-position: center; }
+
+.hidden {
+  display: none; }
+
+table td {
+  border: 1px solid black;
+  padding: 0;
+  margin: 0; }
+
+table.grxd {
+  width: 100%;
+  height: 100%; }
 
 .background-image {
-  /*filter: blur(100px);*/
-  width: 80%;
-  /*transition: filter 500ms ease-in;*/
-  height: 100%; }
+  width: auto;
+  height: 500px; }
 
 .display__time-left {
   font-weight: 100;
