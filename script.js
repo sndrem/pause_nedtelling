@@ -45,7 +45,7 @@ function timer(seconds) {
 
     imageCountDown = setInterval(() => {
       unblur();
-    }, 250); 
+    }, 500); 
 }
 
 function displayTimeLeft(seconds) {
@@ -81,6 +81,7 @@ function gridify() {
 }
 
 function resetGrid() {
+  chooseCat();
   var grid = Array.from(document.getElementsByTagName("td"));
   grid.forEach(g => g.style.background = `white`);
 }
@@ -113,7 +114,15 @@ function drawTable() {
 
     t += '</table>';
     imageContainer.innerHTML = t;
+
+    const button = document.createElement("button");
+    button.innerHTML = "Reset";
+
+    button.addEventListener("click", resetGrid);
+
+    imageContainer.appendChild(button);
 }
+
 drawTable();
 gridify();
 
