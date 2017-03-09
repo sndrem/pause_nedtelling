@@ -15,10 +15,45 @@
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
+	"\/assets\/scripts\/script.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/scripts\/script-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/styles\/style-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/styles\/style-min-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/assets\/styles\/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/styles\/style-min.css",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/index.html": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/index.html",
+		"oF": 0
+		},
+	"\/readme.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/readme.html",
 		"oF": 0
 		},
 	"\/readme.md": {
@@ -38,66 +73,6 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
-		},
-	"\/script.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/script-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/style-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/style-min-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/style-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/til_pauserommet.zip": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/til_pauserommet.zip",
-		"oF": 0
-		},
-	"\/til_pauserommet\/index.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/til_pauserommet\/index.html",
-		"oF": 0
-		},
-	"\/til_pauserommet\/script.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/til_pauserommet\/script-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/til_pauserommet\/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/til_pauserommet\/style-min.css",
-		"oF": 0,
-		"oS": 0
 		}
 	},
 "hooks": [
