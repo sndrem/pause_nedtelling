@@ -1,5 +1,6 @@
 let countdown;
 let imageCountDown;
+let slider;
 const timerDisplay = document.querySelector('.display__time-left');
 const endTime = document.querySelector('.display__end-time');
 const buttons = document.querySelectorAll('[data-time]');
@@ -42,10 +43,13 @@ function timer(seconds) {
         displayTimeLeft(secondsLeft);
     
     }, 1000);
+}
 
+function startCatGrid(blurTime) {
+    clearInterval(imageCountDown);
     imageCountDown = setInterval(() => {
       unblur();
-    }, 500); 
+    }, blurTime); 
 }
 
 function displayTimeLeft(seconds) {
@@ -73,6 +77,7 @@ function percentBetween(secondsLeft, max, min) {
 function startTimer() {
     const seconds = parseInt(this.dataset.time);
     timer(seconds);
+    startCatGrid(500);
 }
 
 function gridify() {
@@ -83,7 +88,12 @@ function gridify() {
 function resetGrid() {
   chooseCat();
   var grid = Array.from(document.getElementsByTagName("td"));
-  grid.forEach(g => g.style.background = `white`);
+  grid.forEach(g => {
+        g.style.background = `white`;
+        g.style.border = "1px solid black";
+        g.className = "not-touched";
+    });
+  startCatGrid(slider.value);
 }
 
 function unblur() {
@@ -91,9 +101,19 @@ function unblur() {
     var grid = Array.from(document.getElementsByClassName("not-touched"));
     if(grid.length === 0) {
       clearInterval(imageCountDown);
+      Array.from(document.querySelectorAll(".touched")).forEach(s => s.style.border = "none");
+    } else {
+        var index = Math.floor(Math.random() * ( grid.length - 0) + 0);
+        grid[index].style.background = "none";
+        grid[index].classList.remove("not-touched");    
+        grid[index].classList.add("touched");    
     }
-    var index = Math.floor(Math.random() * ( grid.length - 0) + 0);
-    grid[index].style.background = "none";
+    
+}
+
+function updateSlider(e) {
+    document.querySelector(".slider-value").innerHTML = `${parseInt(this.value) / 1000} sek. `;
+    startCatGrid(this.value);
 }
 
 function drawTable() {
@@ -114,13 +134,30 @@ function drawTable() {
 
     t += '</table>';
     imageContainer.innerHTML = t;
+    setupControllers();
+}
 
-    const button = document.createElement("button");
+function setupControllers() {
+        const button = document.createElement("button");
     button.innerHTML = "Reset";
 
+    slider = document.createElement("input");
+    slider.type = "range";
+    slider.min = "10";
+    slider.max = "2500";
+    slider.step = "25";
+    slider.value = "250"; // Default value
+
+    const sliderSpan = document.createElement("span");
+    sliderSpan.className = "slider-value";
+    sliderSpan.innerHTML = `${slider.value / 1000} sek.`;
+
     button.addEventListener("click", resetGrid);
+    slider.addEventListener("change", updateSlider);
 
     imageContainer.appendChild(button);
+    imageContainer.appendChild(slider);
+    imageContainer.appendChild(sliderSpan);
 }
 
 drawTable();

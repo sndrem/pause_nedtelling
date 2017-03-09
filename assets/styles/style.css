@@ -16,6 +16,10 @@ body {
   max-height: 100vh;
 }
 
+.slider-value {
+  font-size: 2em;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
