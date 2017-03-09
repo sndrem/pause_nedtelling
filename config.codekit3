@@ -7,8 +7,14 @@
 		"uuidString": "802654EF-CAA5-4416-9F23-D18881E1FBF9"
 		}
 	],
-"creatorBuild": "25504",
+"creatorBuild": "25568",
 "files": {
+	"\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.gitignore",
+		"oF": 0
+		},
 	"\/index.html": {
 		"ft": 8192,
 		"oA": 2,
@@ -41,6 +47,37 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "\/style-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/til_pauserommet.zip": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/til_pauserommet.zip",
+		"oF": 0
+		},
+	"\/til_pauserommet\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/til_pauserommet\/index.html",
+		"oF": 0
+		},
+	"\/til_pauserommet\/script.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/til_pauserommet\/script-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/til_pauserommet\/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/til_pauserommet\/style-min.css",
 		"oF": 0,
 		"oS": 0
 		}
@@ -925,6 +962,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-multi-assign": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-multi-spaces": {
 			"active": 0,
 			"optionString": "{'exceptions': {'Property': true, 'BinaryExpression': false, 'VariableDeclarator': false, 'ImportDeclaration': false}}"
@@ -1253,6 +1294,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"prefer-promise-reject-errors": {
+			"active": 0,
+			"optionString": "{'allowEmptyReject': false}"
+			},
 		"prefer-rest-params": {
 			"active": 0,
 			"optionString": ""
@@ -1346,6 +1391,10 @@
 			"optionString": ""
 			},
 		"template-curly-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"template-tag-spacing": {
 			"active": 0,
 			"optionString": "'never'"
 			},
